@@ -1,5 +1,13 @@
-<template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+<template lang="pug">
+  .about
+    .text 页面2
 </template>
+
+<style lang="less" scoped>
+.about {
+  .text{
+    font-size: 20px;
+    color: red;
+  }
+}
+</style>

@@ -1,20 +1,29 @@
-<template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
-  </div>
+<template lang="pug">
+  #app
+    m-header
+    router-link(to="/") 首页
+    span |
+    router-link(to="/about") 关于
+    hr
+    router-view
+    hr
+    HelloWorld(msg="页脚")
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+<script>
+import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header'
+
+export default {
+  name: 'app',
+  components: {
+    HelloWorld,
+    'm-header': Header
+  }
 }
+</script>
+
+<style lang="less">
+@import "./assets/styles/reset.less";
+@import "./assets/styles/main.less";
 </style>
