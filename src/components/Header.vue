@@ -11,6 +11,7 @@
     data () {
       return {
         activeIndex: '/',
+        user: this.$store.state.user
       }
     },
     methods: {
